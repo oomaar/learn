@@ -1,0 +1,40 @@
+@import './variables';
+@import './header';
+@import './footer';
+
+.contact {
+    @extend header;
+    background-color: white;
+    color: black;
+}
+
+
+
+
+
+// header {
+//     background-color: lightblue;
+//     display: flex;
+//     justify-content: center;
+//     color: $textColor;
+
+//     button {
+//         background: $primaryBtn;
+//         &:hover {
+//             background-color: aqua;
+//         }
+
+//         &::after {
+//             content: helloooo;
+//         }
+//     }
+
+//     p{
+//         font-size: 16px;
+//     }
+// }
+
+// header button {
+//     // background: red;
+//     background: $primaryBtn;
+// }

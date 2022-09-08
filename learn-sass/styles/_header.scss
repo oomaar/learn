@@ -1,0 +1,29 @@
+@mixin flexCenterOrAnyThingYouWant ($directionssss, $loonelbacka) {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $directionssss;
+    background-color: $loonelbacka;
+}
+
+
+header {
+    @include flexCenterOrAnyThingYouWant(column, red);
+    color: white;
+
+    button {
+        background: $primaryBtn;
+        &:hover {
+            background-color: aqua;
+        }
+
+        &::after {
+            content: helloooo;
+        }
+    }
+
+    p{
+        font-size: 16px;
+    }
+}

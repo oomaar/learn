@@ -1,0 +1,10 @@
+footer {
+    @include flexCenterOrAnyThingYouWant(column, black);
+    border: 5px solid purple;
+    width: 100%;
+
+    p {
+        font-size: 4rem;
+        color: wheat;
+    }
+}
