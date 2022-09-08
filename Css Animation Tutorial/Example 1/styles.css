@@ -1,0 +1,181 @@
+/*body {
+    background-color: lightskyblue;
+     text-align: center; 
+}
+*/
+/* 
+.wrapper {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+} */
+
+/* img {   */
+    /* translate */
+    /* moves right if +ve value of px and left if -ve value of px 
+    transform: translateX(-200px);*/
+    /* moves down if +ve value of px and up if -ve value of px  
+    transform: translateY(200px);*/
+    /* translate(value of X, value of Y) 
+    transform: translate(-800px, -30px); */
+
+    /* Scale */
+    /* if value is > 1 then it will stretch X, if value < 1 then it will shrink X 
+    transform: scaleX(0.5);*/
+    /* same on Y */
+    /* transform: scale(X, Y) 
+    transform: scale(0.5, 2.5); */
+
+    /* rotate */
+    /* you won't see the rotaion in X and Y only Z */
+    
+    /* transform: rotateX(100deg); */ 
+    /* transform: rotateY(100deg); */
+    /* transform: rotateZ(45deg); */
+    /* transform: rotateZ(45deg) translateY(200px) scale(1.5); */
+/* } */
+
+/* lesson: 2 */
+/* .circle {
+    width: 100px;
+    padding: 50px;
+    line-height: 0;
+    margin: 60px auto;
+    background: pink;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer; */
+    /* linear: is the default timing function */
+    /* ease-in: starts slower and graduatly speeds up */
+    /* ease-out: starts faster and graduatly slows down */
+    /* transition: background 1s, transform 0.3s 1s ease-out; */
+/* } */
+/* 
+.circle:hover {
+    background: salmon;
+    transform: rotate(360deg);
+} */
+
+/* Lesson: 3 */
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+.grass, .sky, .road {
+    position: relative;
+}
+
+.sky {
+    height: 40%;
+    background: skyblue;
+}
+
+.grass {
+    height: 30%;
+    background: seagreen;
+}
+
+.road {
+    height: 30%;
+    background: dimgray;
+    box-sizing: border-box;
+    border-top: 10px solid gray;
+    border-bottom: 10px solid gray;
+}
+
+.lines {
+    box-sizing: border-box;
+    border: 5px dashed #fff;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 45%;
+}
+
+
+/* Lesson 4: Mario Drives, Lesson 5: fillmode, Lesson 6: infinite */
+.mario {
+    position: absolute;
+    top: -40px;
+    left: 0px;
+    /* animation-name: drive;
+    animation-duration: 3s;
+    animation-fill-mode: both; */
+    /* animation-delay: 2s; */
+    /* animation-iteration-count: infinite;
+    animation-timing-function: linear; */
+    animation: drive 3s both infinite linear, 
+            jump 0.3s 1.2s ease;
+}
+
+@keyframes drive {
+    from {
+        transform: translateX(-100px);
+    }
+    
+    to {
+        transform: translateX(2500px);
+    }
+}
+
+/* Lesson 7: animation direction Lession 8: cubic-bezier.com */
+.luigi {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    animation-name: drive;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+/* lesson 9: short hand */
+/* animation: name duration timingFunction delay itirationCount direction order dosen't matter exept for the time */
+
+.cloud {
+    position: absolute;
+
+}
+
+.cloud:nth-child(1) {
+    width: 200px;
+    top: 120px;
+    opacity: 0.5;
+    animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+    animation: wind 50s linear infinite reverse;
+    width: 300px;
+    top: 0;
+}
+
+@keyframes wind {
+    from {
+        left: -300px;
+    }
+
+    to {
+        left: 100%;
+    }
+}
+
+/* Lesson 10: insted of to and from, percentages */
+@keyframes jump {
+    0% {
+        top: -40px;
+    }
+
+    50% {
+        top: -100px;
+    }
+
+    100% {
+        top: -40px; 
+    }
+}
