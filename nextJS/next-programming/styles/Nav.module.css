@@ -1,0 +1,17 @@
+.nav {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    height: 80px;
+}
+
+.ull {
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+    margin: auto;
+}
+
+.lii {
+    margin: 0 50px;
+}
