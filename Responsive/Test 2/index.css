@@ -1,0 +1,27 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    max-width: 2732px;
+    margin: 0 auto;
+}
+
+.bg-image {
+    width: 100%;
+    /* height: 539.74px; */
+    padding-top: 42%;
+    background: url('../Test1/images/paranormal.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* 
+  Original image has size of 2732 x 1536
+  Aspect ratio as a percenteage = 56%
+  height / width = 1536 / 2732 = 0.5622254758418741 x 100 = 56%
+
+  (percentage / 100) x max-width
+  0.5622254758418741 x 960 = 539.7364568081991
+*/
